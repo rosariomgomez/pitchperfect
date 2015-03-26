@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cWV-aq-c0C">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +40,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aTs-HE-p94"/>
-                                    <segue destination="z7d-GN-R1c" kind="show" id="Bjl-Bh-0PL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,6 +88,7 @@
                         <outlet property="recordButton" destination="T5i-CL-bnc" id="5kR-SA-3Uy"/>
                         <outlet property="recordingLabel" destination="wmu-jj-xZ0" id="iiE-OK-2Rj"/>
                         <outlet property="stopButton" destination="ILr-I6-Pb1" id="Q3p-se-iTm"/>
+                        <segue destination="z7d-GN-R1c" kind="show" identifier="stopRecording" id="d0A-uX-lst"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -150,12 +151,12 @@
                                 <exclude reference="ACk-aV-IBv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="LVy-K8-rn6"/>
-                                <exclude reference="Tcv-4L-5yA"/>
+                                <exclude reference="Vwc-sm-skv"/>
+                                <exclude reference="Fvy-9B-jRH"/>
                                 <exclude reference="gdW-cZ-15f"/>
                                 <exclude reference="oKT-gS-HjQ"/>
-                                <exclude reference="Fvy-9B-jRH"/>
-                                <exclude reference="Vwc-sm-skv"/>
+                                <exclude reference="LVy-K8-rn6"/>
+                                <exclude reference="Tcv-4L-5yA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -165,12 +166,12 @@
                                 <include reference="ACk-aV-IBv"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="LVy-K8-rn6"/>
-                                <include reference="Tcv-4L-5yA"/>
+                                <include reference="Vwc-sm-skv"/>
+                                <include reference="Fvy-9B-jRH"/>
                                 <include reference="gdW-cZ-15f"/>
                                 <include reference="oKT-gS-HjQ"/>
-                                <include reference="Fvy-9B-jRH"/>
-                                <include reference="Vwc-sm-skv"/>
+                                <include reference="LVy-K8-rn6"/>
+                                <include reference="Tcv-4L-5yA"/>
                             </mask>
                         </variation>
                     </view>
