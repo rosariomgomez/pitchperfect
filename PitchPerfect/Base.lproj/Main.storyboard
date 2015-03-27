@@ -143,13 +143,24 @@
                                     <action selector="playChipmunkAudio:" destination="z7d-GN-R1c" eventType="touchUpInside" id="mxH-bx-J73"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjK-2s-U6Q">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="z7d-GN-R1c" eventType="touchUpInside" id="Urr-iS-WzG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Z3I-0e-dlx" firstAttribute="top" secondItem="lAA-Sn-4NL" secondAttribute="bottom" constant="88" id="6hU-60-OYi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RjK-2s-U6Q" secondAttribute="trailing" constant="50" id="B4r-zg-7Il"/>
                             <constraint firstAttribute="centerX" secondItem="ACk-aV-IBv" secondAttribute="centerX" id="Fvy-9B-jRH"/>
                             <constraint firstItem="lAA-Sn-4NL" firstAttribute="top" secondItem="qMU-by-mOR" secondAttribute="bottom" constant="50" id="LVy-K8-rn6"/>
                             <constraint firstItem="Z3I-0e-dlx" firstAttribute="leading" secondItem="Vh3-k0-4zt" secondAttribute="leadingMargin" constant="50" id="LWa-OQ-3c0"/>
+                            <constraint firstItem="RjK-2s-U6Q" firstAttribute="top" secondItem="fh2-bj-OLc" secondAttribute="bottom" constant="88" id="PlQ-Vv-fTE"/>
                             <constraint firstItem="lAA-Sn-4NL" firstAttribute="leading" secondItem="Vh3-k0-4zt" secondAttribute="leadingMargin" constant="50" id="Tcv-4L-5yA"/>
                             <constraint firstItem="0Ti-hU-Oou" firstAttribute="top" secondItem="ACk-aV-IBv" secondAttribute="bottom" constant="60" id="Vwc-sm-skv"/>
                             <constraint firstItem="fh2-bj-OLc" firstAttribute="top" secondItem="qMU-by-mOR" secondAttribute="bottom" constant="50" id="gdW-cZ-15f"/>
@@ -161,6 +172,7 @@
                                 <exclude reference="fh2-bj-OLc"/>
                                 <exclude reference="ACk-aV-IBv"/>
                                 <exclude reference="Z3I-0e-dlx"/>
+                                <exclude reference="RjK-2s-U6Q"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="LVy-K8-rn6"/>
@@ -169,6 +181,8 @@
                                 <exclude reference="oKT-gS-HjQ"/>
                                 <exclude reference="6hU-60-OYi"/>
                                 <exclude reference="LWa-OQ-3c0"/>
+                                <exclude reference="B4r-zg-7Il"/>
+                                <exclude reference="PlQ-Vv-fTE"/>
                                 <exclude reference="Fvy-9B-jRH"/>
                                 <exclude reference="Vwc-sm-skv"/>
                             </mask>
@@ -179,6 +193,7 @@
                                 <include reference="fh2-bj-OLc"/>
                                 <include reference="ACk-aV-IBv"/>
                                 <include reference="Z3I-0e-dlx"/>
+                                <include reference="RjK-2s-U6Q"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="LVy-K8-rn6"/>
@@ -187,6 +202,8 @@
                                 <include reference="oKT-gS-HjQ"/>
                                 <include reference="6hU-60-OYi"/>
                                 <include reference="LWa-OQ-3c0"/>
+                                <include reference="B4r-zg-7Il"/>
+                                <include reference="PlQ-Vv-fTE"/>
                                 <include reference="Fvy-9B-jRH"/>
                                 <include reference="Vwc-sm-skv"/>
                             </mask>
@@ -218,6 +235,7 @@
     </scenes>
     <resources>
         <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
