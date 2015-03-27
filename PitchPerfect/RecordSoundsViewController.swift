@@ -16,6 +16,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var stopButton: UIButton!
     
     var audioRecorder:AVAudioRecorder!
+    var recordedAudio:RecordedAudio!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,13 +60,35 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
-        //TODO: Step 1 - Save the recorded audio
-        
-        //TODO: Step 2 - Move to the next scene aka perform a segue
+        if (flag) {
+            //Step 1 - Save the audio
+            recordedAudio = RecordedAudio()
+            recordedAudio.filePathUrl = recorder.url
+            recordedAudio.title = recorder.url.lastPathComponent
+            //Step 2 - Move to the next scene aka perform a segue
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+        } else {
+            println("Recording was not successful")
+            recordButton.enabled = true
+            stopButton.hidden = true
+        }
     }
     
-    @IBAction func stopRecording(sender: UIButton) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "stopRecording") {
+            //way to access the PlaySoundsViewController
+            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as PlaySoundsViewController
+            //retrieve the data that we want to send to the controller
+            let data = sender as RecordedAudio //use of as to specify the type
+            //pass the data
+            playSoundsVC.receivedAudio = data
+        }
+    }
+    
+    @IBAction func stopAudio(sender: UIButton) {
         recordingLabel.hidden = true
+        //stop the audio recording
+        audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
     }
